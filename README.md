@@ -1,13 +1,5 @@
-# ParticipantesFront
+ParticipantesFront
+Este projeto foi gerado com Angular CLI na versão 13.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-
+Servidor de Desenvolvimento
+Execute ng serve para iniciar um servidor de desenvolvimento. Acesse http://localhost:4200/ no navegador. A aplicação será recarregada automaticamente se você modificar algum dos arquivos de origem.
