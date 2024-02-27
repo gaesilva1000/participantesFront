@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Usuários</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2>Lista de Usuários</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Selecionar</th>
+          <th>Código Externo</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>CPF</th>
+          <th>Telefone Celular</th>          
+          <th>Assinatura Digital</th>
+          <th>Status</th>
+     
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userList">
+            <td><input type="checkbox" (change)="selecionarUsuario(user)"></td>
+          <td>{{ user.codigoExterno }}</td>
+          <td>{{ user.nome }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.cpf }}</td>
+          <td>{{ user.telefone }}</td>
+          <td>{{ user.assinaturaDigital }}</td>
+          <td>{{ user.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-danger" (click)="excluirUsuario()">Excluir</button> 
+   
+  </div>
+</body>
+</html>

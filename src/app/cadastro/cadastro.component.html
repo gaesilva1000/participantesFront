@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h2>Formulário</h2>
+    <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+        <div class="mb-3">
+            <input type="text" class="form-control" formControlName="codigoExterno" placeholder="Código Externo">
+        </div>
+  
+        <div class="mb-3">
+            <input type="text" class="form-control" formControlName="nome" placeholder="Nome">
+        </div>
+  
+        <div class="mb-3">
+            <input type="email" class="form-control" formControlName="email" placeholder="Email">
+        </div>
+  
+        <div class="mb-3">
+            <input type="number" class="form-control" formControlName="cpf" placeholder="CPF">
+        </div>
+  
+        <div class="mb-3">
+            <label for="sexo">Sexo</label>
+            <select class="form-control" formControlName="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+  
+        <div class="mb-3">
+            <label for="estadoCivil">Estado Civil</label>
+            <select class="form-control" formControlName="estadoCivil">
+                <option value="solteiro">Solteiro(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="divorciado">Divorciado(a)</option>
+                <option value="viuvo">Viúvo(a)</option>
+            </select>
+        </div>
+  
+        <div class="mb-3">
+            <input type="text" class="form-control" formControlName="conjuge" placeholder="Cônjuge">
+        </div>
+
+        <!-- Campos adicionados -->
+        <div class="mb-3">
+            <input type="text" class="form-control" formControlName="documentoIdentificacao" placeholder="Documento de Identificação">
+        </div>
+      
+        <div class="mb-3">
+            <textarea class="form-control" formControlName="observacao" placeholder="Observação"></textarea>
+        </div>
+      
+        <div class="mb-3">
+            <input type="text" class="form-control" formControlName="condicaoPessoal" placeholder="Condição Pessoal">
+        </div>
+      
+        <div class="mb-3">
+            <input type="tel" class="form-control" formControlName="telefone" placeholder="Telefone">
+        </div>
+      
+        <div class="mb-3">
+            <input type="tel" class="form-control" formControlName="telefoneCelular" placeholder="Telefone Celular">
+        </div>
+      
+        <div class="mb-3">
+            <input type="date" class="form-control" formControlName="validadeFicha">
+        </div>
+      
+        <div class="mb-3">
+            <input type="date" class="form-control" formControlName="dataNascimento">
+        </div>
+      
+        <div class="mb-3">
+            <label for="token">Token</label>
+            <select class="form-control" formControlName="token">
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+        </div>
+      
+        <div class="mb-3">
+            <label for="politicamenteExposta">Politicamente Exposta</label>
+            <select class="form-control" formControlName="politicamenteExposta">
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+        </div>
+      
+        <div class="mb-3">
+            <label for="assinaturaDigital">Assinatura Digital</label>
+            <select class="form-control" formControlName="assinaturaDigital">
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
